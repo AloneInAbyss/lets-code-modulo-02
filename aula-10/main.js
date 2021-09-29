@@ -16,7 +16,7 @@
 //     ]
 // }
 
-function checkStates(array) {
+function getStates(array) {
   const states = [];
 
   array.forEach(element => {
@@ -28,7 +28,7 @@ function checkStates(array) {
   return states;
 }
 
-function checkInfosPerState(array, states) {
+function getInfosPerState(array, states) {
   const output = {};
 
   for (const item of states) {
@@ -54,13 +54,13 @@ function checkInfosPerState(array, states) {
 }
 
 function analyseData(data) {
-  const states = checkStates(data.students);
+  const states = getStates(data.students);
 
   const response = {
     total: data.students.length,
     stateCount: states.length,
     infosPerState: [
-      checkInfosPerState(data.students, states)
+      getInfosPerState(data.students, states)
     ]
   }
   
