@@ -17,15 +17,31 @@
 // }
 
 function getStates(array) {
-  const states = [];
+  // const states = [];
 
-  array.forEach(element => {
-    if (!states.includes(element.state) && element.state !== '') {
-      states.push(element.state);
+  // array.forEach(element => {
+  //   if (!states.includes(element.state) && element.state !== '') {
+  //     states.push(element.state);
+  //   }
+  // });
+
+  // return states;
+
+  // const states = [];
+  // return (
+  //   array.map((element) => {
+  //     if (!states.includes(element.state) && element.state) {
+  //       states.push(element.state);
+  //       return element;
+  //     }
+  //   })
+  // );
+
+  return array.reduce((previousValue, currentValue) => {
+    if (!previousValue.includes(currentValue.state) && currentValue.state) {
+      return currentValue.state;
     }
-  });
-
-  return states;
+  }, [])
 }
 
 function getInfosPerState(array, states) {
