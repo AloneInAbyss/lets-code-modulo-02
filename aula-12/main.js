@@ -20,9 +20,9 @@ function sum(data) {
 console.log(sum("1"));
 
 function reduceArray(array) {
-  return array.reduce((previousValue, currentValue) => {
-    if (!previousValue.includes(currentValue.state) && currentValue.state) {
-      return currentValue.state;
+  return array.reduce((acc, cur) => {
+    if (!acc.includes(cur.state) && cur.state) {
+      return cur.state;
     }
   }, [])
 }
