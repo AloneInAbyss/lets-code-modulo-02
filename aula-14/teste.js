@@ -1,0 +1,1 @@
+console.log(Promise.resolve().then(console.log("Pronto")))
