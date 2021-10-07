@@ -32,10 +32,3 @@ pokemons.reduce((previousPromise, nextPokemon) => {
       })
   )
 }, Promise.resolve());
-
-// {
-//   fire: ['Charmander'],
-//   electric: ['Pikachu', 'Zapdos'],
-//   water: ['Squirtle', 'Blastoise'],
-//   poison: ['Bulbasaur']
-// }
