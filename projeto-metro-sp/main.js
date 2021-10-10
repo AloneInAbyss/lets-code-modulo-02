@@ -15,8 +15,7 @@ async function fetchSubwayInfo(link) {
 function getStationsLines(stations) {
   const lines = stations.reduce((acc, cur) => {
     const lineName = checkLineName(cur);
-    acc.add(lineName);
-    return acc;
+    return acc.add(lineName);
   }, new Set([]));
   return lines;
 }
